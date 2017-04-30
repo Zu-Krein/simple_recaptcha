@@ -1,4 +1,4 @@
-from settings import RECAPTCHA_PRIVATE_KEY, RECAPTCHA_PUBLIC_KEY
+from settings import RECAPTCHA_PRIVATE_KEY, RECAPTCHA_PUBLIC_KEY, ALLOWED_HOSTS
 import urllib.request, json
 
 def getIp(response):
@@ -20,7 +20,7 @@ def reCaptcha(response):
         with urllib.request.urlopen(url_date) as response:
             html = response.read().decode('utf8')
         result = json.loads(html)
-        if result['success']:
+        if result['success'] and result['hostname'] in ALLOWED_HOSTS:
             return True
         else:
             return False
