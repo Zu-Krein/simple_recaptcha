@@ -6,6 +6,7 @@ Exemple for Django:
 Copy the file to the project folder.
 Next, go to views.py
 
+[code]
 from myproject.functions import reCaptcha
 
 @csrf_exempt
@@ -17,3 +18,4 @@ def register(response):
             pass # FAIL!
     else:
         pass
+[/code]
