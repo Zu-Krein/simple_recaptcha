@@ -5,7 +5,7 @@ If the key is fine, then `True`
 If Google did not like the key - `False`
 
 
-> Exemple for `Django`:
+> Example for `Django`:
 
 * `Copy` the file to the `project folder`.
 
